@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JS</title>
+	</head>
+	<body>
+		<h1>Display final details of employee after change the salary</h1>
+		<script>
+			var employeesalary=function(name,skill,salary)
+			{
+				this.name=name;
+				this.skill=skill;
+				this.salary=salary;
+				this.printdetails=function()
+				{
+					console.log("Employee name is " +this.name+ " and his skills are " +this.skill+ " and his salary is " +this.salary);
+				}
+				this.changesalary=function(newsalary)
+				{
+					this.salary=newsalary;
+				};
+			};
+			var emp1=new employeesalary("RaviShankar","FrontEndDevelopement","100000")
+			emp1.printdetails();
+			emp1.changesalary(150000);
+			emp1.printdetails(); 
+		</script>
+	</body>
+</html>
